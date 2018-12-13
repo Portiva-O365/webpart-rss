@@ -4,7 +4,7 @@ Het RSS web part toont een RSS feed van een externe bron op een pagina. Dit web 
 
 ## Repository
 
-- link naar repository
+- De repository is hierboven te vinden
 - [SPPKG files](https://github.com/Portiva-O365/webpart-rss/tree/master/sharepoint)
 
 ## Functionaliteiten
