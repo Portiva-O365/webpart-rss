@@ -1,0 +1,12 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+    "solution": {
+        "name": "PortivaRSS",
+        "id": "ad74cd99-bfde-4cf5-9896-f310467bcc96",
+        "version": "1.0.0.2",
+        "includeClientSideAssets": true
+    },
+    "paths": {
+        "zippedPackage": "solution/portivarss.sppkg"
+    }
+}

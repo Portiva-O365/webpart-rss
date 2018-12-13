@@ -1,0 +1,30 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+    "id": "6c20526b-2e9d-46ab-b0a0-006b7d4b3f59",
+    "alias": "PortivaRSS",
+    "componentType": "WebPart",
+
+    "version": "*",
+    "manifestVersion": 2,
+
+    "requiresCustomScript": false,
+
+    "preconfiguredEntries": [{
+        "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+        "group": { "default": "Other" },
+        "title": { "default": "Portiva RSS" },
+        "description": { "default": "Portiva RSS web part allows you to specify an RSS feed on your page." },
+        "officeFabricIconFontName": "News",
+        "properties": {
+            "showHeader": true,
+            "title": "Portiva RSS",
+            "description": "",
+            "showDescription": true,
+            "showImage": true,
+            "allowNewsCreation": true,
+            "rssUrl": "",
+            "itemCount": 5,
+            "itemLength": 250
+        }
+    }]
+}

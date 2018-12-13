@@ -1,0 +1,72 @@
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
+.rss {
+    .container {
+        margin: 0px auto;
+    }
+    // .row {
+    //     @include ms-Grid-row;
+    //     @include ms-fontColor-white;
+    //     // background-color: $ms-color-themeDark;
+    //     // padding: 20px;
+    // }
+    // .column {
+    //     @include ms-Grid-col;
+    //     @include ms-lg10;
+    //     @include ms-xl8;
+    //     @include ms-xlPush2;
+    //     @include ms-lgPush1;
+    // }
+    .headerContainer {
+        margin-bottom: 15px;
+        .title {
+            @include ms-font-xl;
+            // @include ms-fontColor-white;
+        }
+        .description {
+            @include ms-font-m;
+            // @include ms-fontColor-white;
+        }
+    }
+    .rssItemContainer {
+        margin-bottom: 15px;
+        display: flex;
+        .contentContainer {
+            width: 70%;
+            margin-top: -5px;
+            .title div {
+                @include ms-font-l;
+                text-decoration: none;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .title a {
+                text-decoration: none;
+            }
+            .description {
+                @include ms-font-m;
+            }
+        }
+        .imageContainer {
+            margin-right: 10px;
+            .image {
+                width: 100px;
+            }
+        }
+        .bulletContainer {
+            // used when image is disabled
+            margin-right: 10px;
+        }
+        .feedInfoContainer {
+            .title {
+                @include ms-font-s;
+            }
+            .feedImage {
+                @include ms-font-l;
+                padding-right: 5px;
+                position: relative;
+                top: 4px;
+            }
+        }
+    }
+}
