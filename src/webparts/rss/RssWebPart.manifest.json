@@ -13,7 +13,10 @@
         "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
         "group": { "default": "Other" },
         "title": { "default": "Portiva RSS" },
-        "description": { "default": "Portiva RSS web part allows you to specify an RSS feed on your page." },
+        "description": {
+            "default": "The Portiva RSS web part allows you to specify an RSS feed on your page.",
+            "nl-nl": "Het Portiva RSS webonderdeel geeft je de mogelijkheid om een RSS feed te tonen op je pagina"
+        },
         "officeFabricIconFontName": "News",
         "properties": {
             "showHeader": true,
@@ -21,7 +24,6 @@
             "description": "",
             "showDescription": true,
             "showImage": true,
-            "allowNewsCreation": true,
             "rssUrl": "",
             "itemCount": 5,
             "itemLength": 250

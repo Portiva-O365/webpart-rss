@@ -1,7 +1,6 @@
 import * as React from "react";
 import { IRSSItems } from "../interfaces/IRssProps";
 import { RSSItem } from "./RssItem";
-import styles from "./Rss.module.scss";
 
 export class RSSItems extends React.Component<IRSSItems, {}> {
     // return a list of RSSItem components
@@ -15,8 +14,9 @@ export class RSSItems extends React.Component<IRSSItems, {}> {
                                 <RSSItem key={idx}
                                     feedTitle={this.props.feed.title}
                                     feedImage={this.props.feed.image}
+                                    showImage={this.props.showImage}
+                                    showDescription={this.props.showDescription}
                                     item={rssItem}
-                                    showImage={this.props.showImage} showDescription={this.props.showDescription}
                                     itemLength={this.props.itemLength}
                                     hasMultipleSources={this.props.hasMultipleSources} />
                             );
@@ -33,6 +33,4 @@ export class RSSItems extends React.Component<IRSSItems, {}> {
         // remove any HTML character in the passed string, used to display rss description
         return inputHTML.replace(/<[^>]+>/g, "");
     }
-
 }
-

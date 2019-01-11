@@ -1,18 +1,18 @@
 /* tslint:disable */
 require('./Rss.module.css');
 const styles = {
-  rss: 'rss_857c54b9',
-  container: 'container_857c54b9',
-  headerContainer: 'headerContainer_857c54b9',
-  title: 'title_857c54b9',
-  description: 'description_857c54b9',
-  rssItemContainer: 'rssItemContainer_857c54b9',
-  contentContainer: 'contentContainer_857c54b9',
-  imageContainer: 'imageContainer_857c54b9',
-  image: 'image_857c54b9',
-  bulletContainer: 'bulletContainer_857c54b9',
-  feedInfoContainer: 'feedInfoContainer_857c54b9',
-  feedImage: 'feedImage_857c54b9',
+  rss: 'rss_9240c742',
+  container: 'container_9240c742',
+  headerContainer: 'headerContainer_9240c742',
+  title: 'title_9240c742',
+  description: 'description_9240c742',
+  rssItemContainer: 'rssItemContainer_9240c742',
+  contentContainer: 'contentContainer_9240c742',
+  imageContainer: 'imageContainer_9240c742',
+  image: 'image_9240c742',
+  bulletContainer: 'bulletContainer_9240c742',
+  feedInfoContainer: 'feedInfoContainer_9240c742',
+  feedImage: 'feedImage_9240c742',
 };
 
 export default styles;

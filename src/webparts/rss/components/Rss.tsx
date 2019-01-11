@@ -2,6 +2,7 @@ import * as React from "react";
 import { IRSSProps, IRSSPropsState } from "../interfaces/IRssProps";
 import { RSSItems } from "./RssItems";
 import styles from "./Rss.module.scss";
+import * as strings from "RssWebPartStrings";
 
 export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
 
@@ -9,32 +10,41 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
   private _hasMultipleSources: boolean;
 
   constructor(props: IRSSProps) {
+
     // call parent
     super(props);
+
     // set class properties
     this._rssUrl = this.props.rssUrl;
-    this._hasMultipleSources = false;
+    this._hasMultipleSources = false; // Maybe future update
+
     // initialize component
     this.state = { rssItemsLoaded: false, rssError: false, rssFeedInformation: null, rssItems: [] };
   }
 
   public componentDidMount(): void {
+
     // component mounted, load the rss items from the source
     this._loadRSSFeed();
   }
 
   public componentWillReceiveProps(nextProps: IRSSProps, nextState: IRSSPropsState): void {
+
     // component update, only load data again when RSS url has changed
     if (this.props.rssUrl !== nextProps.rssUrl) {
+
       // set new url
       this._rssUrl = nextProps.rssUrl;
+
       // reload the RSS feed
       this._loadRSSFeed();
     }
   }
 
   public render(): React.ReactElement<IRSSProps> {
+
     if (this.state.rssItemsLoaded) {
+
       // items loaded, show the web part
       return (
         <div className={styles.rss}>
@@ -61,23 +71,15 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
         </div>
       );
     } else {
-      // items loading or error
-      if (this.state.rssError) {
-        // there was an error, url probably incorrect
-        return (
-          <div>Oops, we could not load any RSS items, check the RSS url in the properties...</div>
-        );
-      } else {
-        // rss still loading
-        return (
-          <div>loading...</div>
-        );
-      }
+
+      // show status
+      return (
+        <div>{this.state.rssError ? strings.NoItemsFoundText : strings.LoadingText}</div>
+      );
     }
   }
 
   private _loadRSSFeed = (): void => {
-
     const rssBaseUrl: string = "https://api.rss2json.com/v1/api.json?rss_url=";
 
     let rssUrl: string = "";
@@ -100,35 +102,8 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
         this._hasMultipleSources = true;
       }
 
-      //
-      // version 2: allow multiple RSS feeds, for now: just take the first feed in line...
-      //
-
       // add the rss url from properties
       rssUrl = rssArray[0];
-
-      // //
-      // // https://stackoverflow.com/questions/33886555/can-promise-load-multi-urls-in-order
-      // //
-      // rssArray.reduce((rssPromise: any, rssItemUrl) => {
-      //   return rssPromise.then(() => {
-      //     // process the rss items here...
-      //     console.log(rssItemUrl);
-      //     return fetch(rssUrl)
-      //       .then((result) => {
-      //         // convert result to proper JSON
-      //         return result.json();
-      //       });
-      //   });
-      // }, Promise.resolve())
-      //   .then((results: any) => {
-      //     // process all results here...
-      //     console.log(results);
-      //   })
-      //   .catch((err: any) => {
-      //     // something went wrong in processing the items
-      //     console.log(err);
-      //   });
 
       // load the contents from the rss url
       try {
@@ -157,7 +132,4 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
       }
     }
   }
-
 }
-
-
