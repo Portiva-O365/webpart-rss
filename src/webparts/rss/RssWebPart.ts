@@ -13,7 +13,6 @@ import * as strings from "RssWebPartStrings";
 import Rss from "./components/Rss";
 import { IRSSProps, IRSSWebPartProps } from "./interfaces/IRssProps";
 
-
 export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> {
 
   public render(): void {
@@ -24,7 +23,6 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
         description: this.properties.description,
         showDescription: this.properties.showDescription,
         showImage: this.properties.showImage,
-        allowNewsCreation: this.properties.allowNewsCreation,
         rssUrl: this.properties.rssUrl,
         itemCount: this.properties.itemCount,
         itemLength: this.properties.itemLength
@@ -38,10 +36,6 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  // protected get disableReactivePropertyChanges(): boolean {
-  //   return true;
-  // }
-
   protected get dataVersion(): Version {
     return Version.parse("1.0");
   }
@@ -51,43 +45,42 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
       pages: [
         {
           header: {
-            // tslint:disable-next-line:max-line-length
-            description: "The RSS web part allows you to show content from other sites internally but externally. For instance news sites. Enter the information below!"
+            description: strings.ppHeaderDescriptionLabel
           },
           groups: [
             {
-              groupName: "Common Settings",
+              groupName: strings.ppCommonSettingsLabel,
               groupFields: [
                 PropertyPaneToggle("showHeader", {
-                  label: "Show title and description"
+                  label: strings.ppShowHeaderLabel
                 }),
                 PropertyPaneTextField("title", {
-                  label: "Enter the title for this web part",
+                  label: strings.ppTitleLabel,
                   disabled: !this.properties.showHeader
                 }),
                 PropertyPaneTextField("description", {
-                  label: "Enter the description for this web part",
+                  label: strings.ppDescriptionLabel,
                   multiline: true, rows: 3, resizable: false,
                   disabled: !this.properties.showHeader
                 }),
                 PropertyPaneTextField("rssUrl", {
-                  label: "Source RSS URL",
-                  description: "Enter the source RSS url.",
+                  label: strings.ppRssUrlLabel,
+                  description: strings.ppRssUrlDescription,
                   multiline: true, rows: 3, resizable: false,
                 }),
                 PropertyPaneSlider("itemCount", {
-                  label: "Number of items to display (per source)",
+                  label: strings.ppItemCountLabel,
                   value: this.properties.itemCount,
                   min: 1, max: 10
                 }),
                 PropertyPaneToggle("showImage", {
-                  label: "Show RSS images if available"
+                  label: strings.ppShowImageLabel
                 }),
                 PropertyPaneToggle("showDescription", {
-                  label: "Show RSS descriptions if available"
+                  label: strings.ppShowDescriptionLabel
                 }),
                 PropertyPaneSlider("itemLength", {
-                  label: "Description length per item",
+                  label: strings.ppItemDescriptionLengthLabel,
                   value: this.properties.itemLength,
                   min: 100, max: 500, step: 10, showValue: false, disabled: !this.properties.showDescription
                 })

@@ -1,7 +1,17 @@
 declare interface IRssWebPartStrings {
-  PropertyPaneDescription: string;
-  BasicGroupName: string;
-  DescriptionFieldLabel: string;
+  ppHeaderDescriptionLabel: string;
+  ppCommonSettingsLabel: string;
+  ppShowHeaderLabel: string;
+  ppTitleLabel: string;
+  ppDescriptionLabel: string;
+  ppRssUrlLabel: string;
+  ppRssUrlDescription: string;
+  ppItemCountLabel: string;
+  ppShowImageLabel: string;
+  ppShowDescriptionLabel: string;
+  ppItemDescriptionLengthLabel: string;
+  NoItemsFoundText: string;
+  LoadingText: string;
 }
 
 declare module 'RssWebPartStrings' {

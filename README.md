@@ -1,27 +1,22 @@
 # RSS web part
-
 The RSS web part shows an RSS feed from an external source on a page. This web part works on both Modern Pages as well as on on Classic pages such as site pages or page layouts.
 
 ## Repository
-
 - Repository can be found here > [how to use the repository][link1]?
 - [SPPKG files](https://github.com/Portiva-O365/webpart-rss/tree/master/sharepoint) > [how to use the package][link2]?
 
-## Settings
-
-- title and description
-- number of items displayed
-- optional display of images and descriptions
-- length of description
-- available in Dutch and English (automatically based on browser settings)
+## Features
+- Title and description
+- Dynamic number of items displayed
+- Display of images and descriptions (optionally)
+- Configurable length of descriptions
+- Multiple languages supported; **Dutch** and **English**
 
 ## Images
-
 ![Page with RSS web part][image01]
 ![Web Part Configuratie][image02]
 
 ## Disclaimer
-
 > THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 
 [image01]: ./images/RSS01.png
