@@ -24,6 +24,8 @@
             "description": "",
             "showDescription": true,
             "showImage": true,
+            "showPublicationDate": true,
+            "localeDate": "en",
             "rssUrl": "",
             "itemCount": 5,
             "itemLength": 250

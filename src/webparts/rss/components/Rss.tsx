@@ -16,7 +16,7 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
 
     // set class properties
     this._rssUrl = this.props.rssUrl;
-    this._hasMultipleSources = false; // Maybe future update
+    this._hasMultipleSources = false; // future update
 
     // initialize component
     this.state = { rssItemsLoaded: false, rssError: false, rssFeedInformation: null, rssItems: [] };
@@ -66,7 +66,9 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
               itemCount={this.props.itemCount}
               showDescription={this.props.showDescription} showImage={this.props.showImage}
               itemLength={this.props.itemLength}
-              hasMultipleSources={this._hasMultipleSources}/>
+              hasMultipleSources={this._hasMultipleSources}
+              showPublicationDate={this.props.showPublicationDate}
+              localeDate={this.props.localeDate}/>
           </div>
         </div>
       );
