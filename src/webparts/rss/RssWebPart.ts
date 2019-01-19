@@ -72,7 +72,12 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
                   label: strings.ppItemCountLabel,
                   value: this.properties.itemCount,
                   min: 1, max: 10
-                }),
+                })
+              ]
+            },
+            {
+              groupName: strings.ppItemSettingsLabel,
+              groupFields: [
                 PropertyPaneToggle("showImage", {
                   label: strings.ppShowImageLabel
                 }),
