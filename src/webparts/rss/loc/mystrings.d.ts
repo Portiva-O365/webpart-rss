@@ -1,6 +1,7 @@
 declare interface IRssWebPartStrings {
   ppHeaderDescriptionLabel: string;
   ppCommonSettingsLabel: string;
+  ppItemSettingsLabel: string;
   ppShowHeaderLabel: string;
   ppTitleLabel: string;
   ppDescriptionLabel: string;
