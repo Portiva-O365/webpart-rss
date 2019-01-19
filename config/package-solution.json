@@ -3,10 +3,10 @@
     "solution": {
         "name": "PortivaRSS",
         "id": "ad74cd99-bfde-4cf5-9896-f310467bcc96",
-        "version": "1.0.0.3",
+        "version": "1.0.0.4",
         "includeClientSideAssets": true
     },
     "paths": {
-        "zippedPackage": "solution 1.0.0.3/portivarss.sppkg"
+        "zippedPackage": "solution 1.0.0.4/portivarss.sppkg"
     }
 }

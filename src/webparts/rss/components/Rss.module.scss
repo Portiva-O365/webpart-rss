@@ -42,6 +42,7 @@
             }
             .title a {
                 text-decoration: none;
+                color: "[theme:themePrimary, default:#0078d7]";
             }
             .description {
                 @include ms-font-m;
