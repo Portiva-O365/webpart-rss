@@ -23,6 +23,8 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
         description: this.properties.description,
         showDescription: this.properties.showDescription,
         showImage: this.properties.showImage,
+        showPublicationDate: this.properties.showPublicationDate,
+        localeDate: this.properties.localeDate,
         rssUrl: this.properties.rssUrl,
         itemCount: this.properties.itemCount,
         itemLength: this.properties.itemLength
@@ -88,6 +90,14 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
                   label: strings.ppItemDescriptionLengthLabel,
                   value: this.properties.itemLength,
                   min: 100, max: 500, step: 10, showValue: false, disabled: !this.properties.showDescription
+                }),
+                PropertyPaneToggle("showPublicationDate", {
+                  label: strings.ppShowPublicationDateLabel
+                }),
+                PropertyPaneTextField("localeDate", {
+                  label: strings.ppLocaleDateLabel,
+                  description: strings.ppLocaleDateDescription,
+                  disabled: !this.properties.showPublicationDate
                 })
               ]
             }

@@ -1,13 +1,15 @@
 export interface IRSSProps {
-  // Header configuration
-  showHeader: boolean;        
+  // header configuration
+  showHeader: boolean;
   title: string;
   description: string;
-  // Main configuration
+  // main configuration
   rssUrl: string;
-  // Properties per item
-  showDescription: boolean;   
+  // properties per item
+  showDescription: boolean;
   showImage: boolean;
+  showPublicationDate: boolean;
+  localeDate: string;
   itemCount: number;
   itemLength: number;
 }
@@ -28,6 +30,8 @@ export interface IRSSItems {
   itemCount?: number;
   showDescription?: boolean;
   showImage?: boolean;
+  showPublicationDate?: boolean;
+  localeDate: string;
   itemLength: number;
 }
 
@@ -39,6 +43,8 @@ export interface IRSSItem {
   item: any;
   showDescription?: boolean;
   showImage?: boolean;
+  showPublicationDate?: boolean;
+  localeDate: string;
   itemLength: number;
 }
 

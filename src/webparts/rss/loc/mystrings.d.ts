@@ -11,6 +11,9 @@ declare interface IRssWebPartStrings {
   ppShowImageLabel: string;
   ppShowDescriptionLabel: string;
   ppItemDescriptionLengthLabel: string;
+  ppShowPublicationDateLabel: string;
+  ppLocaleDateDescription: string;
+  ppLocaleDateLabel: string;
   NoItemsFoundText: string;
   LoadingText: string;
 }
