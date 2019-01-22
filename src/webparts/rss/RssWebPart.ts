@@ -21,13 +21,13 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
         showHeader: this.properties.showHeader,
         title: this.properties.title,
         description: this.properties.description,
+        rssUrl: this.properties.rssUrl,
+        maxItemCount: this.properties.maxItemCount,
         showDescription: this.properties.showDescription,
+        maxDescriptionLength: this.properties.maxDescriptionLength,
         showImage: this.properties.showImage,
         showPublicationDate: this.properties.showPublicationDate,
         localeDate: this.properties.localeDate,
-        rssUrl: this.properties.rssUrl,
-        itemCount: this.properties.itemCount,
-        itemLength: this.properties.itemLength
       }
     );
 
@@ -70,9 +70,9 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
                   description: strings.ppRssUrlDescription,
                   multiline: true, rows: 3, resizable: false,
                 }),
-                PropertyPaneSlider("itemCount", {
+                PropertyPaneSlider("maxItemCount", {
                   label: strings.ppItemCountLabel,
-                  value: this.properties.itemCount,
+                  value: this.properties.maxItemCount,
                   min: 1, max: 10
                 })
               ]
@@ -86,9 +86,9 @@ export default class RssWebPart extends BaseClientSideWebPart<IRSSWebPartProps> 
                 PropertyPaneToggle("showDescription", {
                   label: strings.ppShowDescriptionLabel
                 }),
-                PropertyPaneSlider("itemLength", {
+                PropertyPaneSlider("maxDescriptionLength", {
                   label: strings.ppItemDescriptionLengthLabel,
-                  value: this.properties.itemLength,
+                  value: this.properties.maxDescriptionLength,
                   min: 100, max: 500, step: 10, showValue: false, disabled: !this.properties.showDescription
                 }),
                 PropertyPaneToggle("showPublicationDate", {

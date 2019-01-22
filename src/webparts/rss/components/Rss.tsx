@@ -62,11 +62,12 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
             }
             <RSSItems
               feed={this.state.rssFeedInformation}
-              items={this.state.rssItems}
-              itemCount={this.props.itemCount}
-              showDescription={this.props.showDescription} showImage={this.props.showImage}
-              itemLength={this.props.itemLength}
               hasMultipleSources={this._hasMultipleSources}
+              items={this.state.rssItems}
+              maxItemCount={this.props.maxItemCount}
+              showImage={this.props.showImage}
+              showDescription={this.props.showDescription}
+              maxDescriptionLength={this.props.maxDescriptionLength}
               showPublicationDate={this.props.showPublicationDate}
               localeDate={this.props.localeDate}/>
           </div>

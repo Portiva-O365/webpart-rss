@@ -8,19 +8,19 @@ The RSS web part shows an RSS feed from an external source on a page. This web p
 ## Features
 - Title and description
 - Dynamic number of items displayed
-- Display of images and descriptions (optionally)
-- Configurable length of descriptions
+- Configurable options for;
+    - Image (hide/view)
+    - Description (hide/view/length)
+    - Publishing date (hide/view/format)
 - Multiple languages supported; **Dutch** and **English**
 
-## Images
-![Page with RSS web part][image01]
-![Web Part Configuratie][image02]
+## Preview
+![RSS web part][ScreenRecording]
 
 ## Disclaimer
 > THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 
-[image01]: ./images/RSS01.png
-[image02]: ./images/RSS02.png
+[ScreenRecording]: ./images/screenrecording.gif
 
 [link1]: https://github.com/Portiva-O365/portfolio/blob/master/repository-usage.md
 [link2]: https://github.com/Portiva-O365/portfolio/blob/master/repository-packages.md
