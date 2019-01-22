@@ -5,12 +5,15 @@ import styles from "./Rss.module.scss";
 import * as moment from "moment";
 
 export class RSSItem extends React.Component<IRSSItem, {}> {
-  // component to show RSS item
 
+  // component to show RSS item
   public render(): React.ReactElement<IRSSItem> {
     return (
       <div className={styles.rssItemContainer}>
-        <RSSItemImage showImage={this.props.showImage} image={this.props.item.enclosure} />
+        <RSSItemImage
+          image={this.props.item.enclosure}
+          showImage={this.props.showImage} />
+        
         <div className={styles.contentContainer}>
           <div className={styles.title}>
             <a href={this.props.item.link} target="_blank">
@@ -47,7 +50,7 @@ export class RSSItem extends React.Component<IRSSItem, {}> {
 
   private _shortenDescription = (inputDescription: string): string => {
     // return a shortend description
-    return `${inputDescription.substring(0, this.props.itemLength)}...`;
+    return `${inputDescription.substring(0, this.props.maxDescriptionLength)}...`;
   }
 
   private _getPublicationDate = (pubDate: string): string => {
@@ -56,5 +59,4 @@ export class RSSItem extends React.Component<IRSSItem, {}> {
     // return the publication date, no time
     return moment(pubDate).format("LL").toString();
   }
-
 }

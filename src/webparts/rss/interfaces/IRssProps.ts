@@ -5,13 +5,13 @@ export interface IRSSProps {
   description: string;
   // main configuration
   rssUrl: string;
+  maxItemCount: number;
   // properties per item
   showDescription: boolean;
+  maxDescriptionLength: number;
   showImage: boolean;
   showPublicationDate: boolean;
   localeDate: string;
-  itemCount: number;
-  itemLength: number;
 }
 
 export interface IRSSWebPartProps extends IRSSProps { }
@@ -25,27 +25,27 @@ export interface IRSSPropsState {
 
 export interface IRSSItems {
   feed: any;
-  hasMultipleSources: boolean;
   items: any;
-  itemCount?: number;
+  maxItemCount?: number;
+  hasMultipleSources: boolean;
   showDescription?: boolean;
+  maxDescriptionLength: number;
   showImage?: boolean;
   showPublicationDate?: boolean;
   localeDate: string;
-  itemLength: number;
 }
 
 export interface IRSSItem {
+  item: any;
+  hasMultipleSources: boolean;
   feedTitle: string;
   feedImage: string;
   feedDescription?: string;
-  hasMultipleSources: boolean;
-  item: any;
   showDescription?: boolean;
+  maxDescriptionLength: number;
   showImage?: boolean;
   showPublicationDate?: boolean;
   localeDate: string;
-  itemLength: number;
 }
 
 export interface IRSSItemImage {

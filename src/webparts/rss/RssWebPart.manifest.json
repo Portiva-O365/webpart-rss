@@ -22,13 +22,13 @@
             "showHeader": true,
             "title": "Portiva RSS",
             "description": "",
+            "rssUrl": "",
+            "maxItemCount": 5,
             "showDescription": true,
+            "maxDescriptionLength": 250,
             "showImage": true,
             "showPublicationDate": true,
-            "localeDate": "en",
-            "rssUrl": "",
-            "itemCount": 5,
-            "itemLength": 250
+            "localeDate": "en"
         }
     }]
 }
