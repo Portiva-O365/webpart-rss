@@ -20,7 +20,7 @@ The RSS web part shows an RSS feed from an external source on a page. This web p
 ## Disclaimer
 > THIS CODE IS PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 
-[ScreenRecording]: ./images/screen.gif
+[ScreenRecording]: ./images/screenrecording.gif
 
 [link1]: https://github.com/Portiva-O365/portfolio/blob/master/repository-usage.md
 [link2]: https://github.com/Portiva-O365/portfolio/blob/master/repository-packages.md
