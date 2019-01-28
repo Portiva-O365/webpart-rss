@@ -14,6 +14,9 @@ The RSS web part shows an RSS feed from an external source on a page. This web p
     - Publishing date (hide/view/format)
 - Multiple languages supported; **Dutch** and **English**
 
+## Building and packaging
+- run command "npm run package" inside rootfolder.
+
 ## Preview
 ![RSS web part][ScreenRecording]
 

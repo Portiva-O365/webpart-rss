@@ -27,7 +27,7 @@
       "name": "Hosted workbench",
       "type": "chrome",
       "request": "launch",
-      "url": "https://cloudapg.sharepoint.com/_layouts/workbench.aspx",
+      "url": "https://enter-your-SharePoint-site/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
@@ -38,7 +38,7 @@
       },
       "runtimeArgs": [
         "--remote-debugging-port=9222",
-        "--profile-directory=Default"
+        "-incognito"
       ]
     }
   ]
