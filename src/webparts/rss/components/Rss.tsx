@@ -69,7 +69,7 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
               showDescription={this.props.showDescription}
               maxDescriptionLength={this.props.maxDescriptionLength}
               showPublicationDate={this.props.showPublicationDate}
-              localeDate={this.props.localeDate}/>
+              localeDate={this.props.localeDate} />
           </div>
         </div>
       );
@@ -96,7 +96,7 @@ export default class Rss extends React.Component<IRSSProps, IRSSPropsState> {
       rssArray = this._rssUrl.split(";");
       // add base url to each rss url in the array
       rssArray = rssArray.map((itemUrl: string, idx: number) => {
-        return `${rssBaseUrl}${itemUrl.trim()}`;
+        return `${rssBaseUrl}${encodeURIComponent(itemUrl.trim())}`;
       });
 
       // set sources property
